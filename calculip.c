@@ -56,7 +56,7 @@ int main(void)
             printf("mauvaise saisi");
             break;
     }
-}
+	}
 
 }
 

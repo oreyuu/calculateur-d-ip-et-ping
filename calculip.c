@@ -9,7 +9,8 @@ int o1 ,o2, o3, o4; //ip adress
 int cidr; //cidr
 int tool = 0;
 
-void ipimage() {
+void ipimage() 
+{
 
     printf("\033[31m");
     printf("░▒▓█▓▒░▒▓███████▓▒░        ░▒▓██████▓▒░░▒▓███████▓▒░░▒▓███████▓▒░░▒▓███████▓▒░░▒▓████████▓▒░░▒▓███████▓▒░▒▓███████▓▒░ \n");
@@ -23,11 +24,13 @@ void ipimage() {
     printf("open source programme by oreyuu");
 }
 
-int main(void) {
+int main(void) 
+{
 
     ipimage();
     
-    while (1) {
+    while (1) 
+	{
     
     // prise en charge des variables : IP + CIDR
 
@@ -38,7 +41,8 @@ int main(void) {
     scanf("%d", &tool);
 
 
-    switch ( tool ) {
+    switch ( tool ) 
+	{
         case 1 :
             ip_calculator();
             break;
@@ -56,7 +60,8 @@ int main(void) {
 
 }
 
-int ip_calculator() {
+int ip_calculator() 
+{
 
 	printf("\n\nsaisissez votre @IP      : ");
 	scanf("%d.%d.%d.%d", &o1, &o2, &o3, &o4);
@@ -97,7 +102,8 @@ int ip_calculator() {
 
            // Affiche le masque en binaire (avec points toutes les 8 bits)
     printf("Masque en binaire        : ");
-    for (int i = 0; i < 32; i++) {
+    for (int i = 0; i < 32; i++)
+	{
         if (i < cidr)
             printf("1");
         else
@@ -130,7 +136,8 @@ int ip_calculator() {
     // Calcul du nombre d'adresses IP utilisables
     int nb_ips_utilisables = 0;
 
-    if (cidr < 31) {
+    if (cidr < 31)
+	{
         nb_ips_utilisables = (1 << (32 - cidr)) - 2;
     } else if (cidr == 31) {
         nb_ips_utilisables = 2; // point à point
@@ -152,7 +159,8 @@ int ip_calculator() {
     return 0;
 }
 
-int ping8888() {
+int ping8888() 
+{
 
     int choix = 0;
     int oo1, oo2, oo3, oo4; //ip pour la fonction case choix deux 
@@ -181,7 +189,8 @@ int ping8888() {
     return 0;
 }
 
-int exitcode() {
+int exitcode() 
+{
 
     printf("bye bye !");
     exit(0);
